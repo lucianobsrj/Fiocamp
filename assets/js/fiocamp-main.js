@@ -35,8 +35,8 @@ const revealObserver = new IntersectionObserver((entries) => {
         }
     });
 }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -50px 0px' // Triggers slightly before the element is fully in view
+    threshold: 0.1,
+    rootMargin: '0px 0px -10% 0px' 
 });
 
 revealElements.forEach(el => revealObserver.observe(el));
