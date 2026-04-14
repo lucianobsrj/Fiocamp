@@ -40,3 +40,13 @@ const revealObserver = new IntersectionObserver((entries) => {
 });
 
 revealElements.forEach(el => revealObserver.observe(el));
+
+// Hero Parallax Effect
+const heroBg = document.querySelector('.hero-parallax-bg');
+if (heroBg) {
+    window.addEventListener('scroll', () => {
+        const scrollValue = window.scrollY;
+        // Move the background slower than the content (0.3 factor)
+        heroBg.style.transform = `translateY(${scrollValue * 0.3}px)`;
+    });
+}
