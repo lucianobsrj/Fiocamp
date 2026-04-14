@@ -198,8 +198,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .step-item span {
-    display: inline-flex;
-    align-items: baseline;
+    display: block;
     font-size: 40px;
     font-weight: 800;
     color: var(--brand-red);
