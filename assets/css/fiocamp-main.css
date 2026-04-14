@@ -291,6 +291,7 @@ h1, h2, h3, h4, h5, h6 {
     
     .logo img { max-width: 160px; }
     header nav { display: none; }
+    .header-main { padding: 10px 0 !important; }
     .header-main .fiocamp-container { justify-content: center; }
     
     /* Testimonials centering on mobile */
@@ -304,14 +305,40 @@ h1, h2, h3, h4, h5, h6 {
         margin-left: auto !important;
         margin-right: auto !important;
     }
+
+    .sticky-top-bar a {
+        display: block;
+        margin-left: 0;
+        margin-top: 5px;
+    }
 }
 
 .mobile-action-bar { display: none; }
 
-/* Persitent Floating Button */
+/* Persistent Floating Button */
 .whatsapp-float {
     position: fixed;
     bottom: 30px;
     right: 30px;
     z-index: 1001;
+}
+
+/* SCROLL REVEAL ANIMATION */
+.reveal {
+    opacity: 0;
+    filter: blur(15px);
+    transform: translateY(30px);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+    will-change: opacity, filter, transform;
+}
+
+.reveal.active {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+/* Staggered reveal for children if needed */
+.reveal-stagger {
+    transition-delay: 0.2s;
 }
